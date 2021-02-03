@@ -1,0 +1,28 @@
+.pokemon_card {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 3%;
+
+    background-color: #eeb45a;
+}
+
+.pokemon_card > h1 {
+    color: #207394;
+}
+
+.pokemon_card > img {
+    border-radius: 24px;
+    background: #eaf1f6;
+    box-shadow: inset 9px 9px 18px #b5b5b5,
+    inset -9px -9px 18px #ffffff;
+    object-fit: contain;
+    width: 100%;
+    max-width: 300px;
+}

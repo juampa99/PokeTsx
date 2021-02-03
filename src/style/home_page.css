@@ -1,0 +1,72 @@
+body, #root {
+    background-color: #F9C846;
+    height: 97vh;
+    font-family: 'Potta One', Serif;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+
+.search_bar {
+    margin: 0;
+    display: grid;
+    align-self: center;
+    position: fixed;
+    width: 100%;
+    border: none;
+}
+
+.search_bar > input {
+    border:none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.search_bar > input:focus {
+    border:none;
+}
+
+.search_bar_dropdown {
+    display: grid;
+}
+
+.search_bar_dropdown > ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    background-color: #2a75bb;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.search_bar_dropdown > ul > li > a {
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 3px;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+
+
+    color: #ffcb05;
+}
+
+.searchBarAndLogo {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
