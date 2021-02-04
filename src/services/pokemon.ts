@@ -25,4 +25,18 @@ function capitalize(str: string): string {
     return str.substr(0, 1).toUpperCase() + str.substr(1);
 }
 
-export { filterPokemonList, capitalize };
+function idFromUrl(url: string): number {
+    const regex = new RegExp("[^pokemon]*$");
+    let dirtyId = url.match(regex)?.[0];
+
+    if(!dirtyId)
+        return 1;
+
+    return Number(dirtyId.substr(1).slice(0, -1));
+}
+
+function getStatBarWidthFraction() {
+    return document.getElementsByClassName("statBar")[0]?.getBoundingClientRect().width / 255;
+}
+
+export { filterPokemonList, capitalize, idFromUrl, getStatBarWidthFraction };

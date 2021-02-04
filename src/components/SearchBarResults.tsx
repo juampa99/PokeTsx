@@ -1,9 +1,10 @@
-import {capitalize} from "../services/pokemon";
+import {capitalize, idFromUrl} from "../services/pokemon";
 
 const SearchBarResults = ( { items } : { items: { name: string, url: string }[] } ) => {
 
     function mapSearchResults(item: {name: string, url:string}, i: number) {
-        return <li key={i}> <a href={"/pokemon/" + item.name }> { capitalize(item.name) } </a></li>
+        idFromUrl(item.url);
+        return <li key={i}> <a href={ "/pokemon/" + idFromUrl(item.url)}> { capitalize(item.name) } </a></li>
     }
 
     return (

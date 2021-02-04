@@ -1,26 +1,33 @@
-import {IPokemon} from "pokeapi-typescript";
+import {capitalize} from "../services/pokemon";
+import {PokemonStats} from "./PokemonStats";
+import {TPokemon} from "../entities/TPokemon";
 
-const PokemonCard = ( { data }: { data: IPokemon | undefined } ) => {
+const PokemonCard = ( { data }: { data: TPokemon | undefined } ) => {
 
-    let pokemonData : IPokemon;
+    let pokemonData : TPokemon;
 
     if(data) {
         pokemonData = data;
-    } else {
+    }
+    else {
         return <></>;
     }
 
-    let name = pokemonData.name.substr(0, 1)?.toUpperCase() + pokemonData.name.substr(1);
-    // Typing is wrong, the property 'other' exists for most pokemon
-    // TODO: Use custom typing for this
-    // @ts-ignore
-    let link = pokemonData.sprites.other ?  pokemonData.sprites.other['official-artwork'].front_default : pokemonData.sprites.front_default;
-    let number = pokemonData.order;
-
     return (
         <div className="pokemon_card" >
-            <h1> { number + " " + name } </h1>
-            <img src={link} alt="Pokemon image" />
+            <h1> { pokemonData.number + " " + pokemonData.name } </h1>
+            <img src={pokemonData.imageUrl } alt="Pokemon image" />
+
+            <div>
+                <h2>Types: { pokemonData.types.map( (type: string, i: number) => <span key={i} > {capitalize(type)} </span> ) } </h2>
+                <p>
+                    <h2>Height: {pokemonData.height}</h2>
+                    <h2>Weight: {pokemonData.weight}</h2>
+                </p>
+            </div>
+
+            <PokemonStats stats={pokemonData.stats} />
+
         </div>
 
     )

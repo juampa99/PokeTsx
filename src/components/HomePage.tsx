@@ -19,7 +19,6 @@ const HomePage = () => {
                 <img className="logo" src={logo} alt="PokeTsx Logo" />
                 <SearchBar list={pokemonList} />
             </div>
-
         </>
     )
 }
