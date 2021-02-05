@@ -1,20 +1,28 @@
 export type Stat = {
     name: string,
-    power: number
+    power: number,
+    color: string
+}
+
+export type Type = {
+    name: string,
+    color: string
 }
 
 export class TPokemon {
 
+    id : number;
     number : number;
     name : string;
     stats : Array<Stat>;
     height: number;
     weight: number;
     imageUrl: string;
-    types: Array<any>;
+    types: Array<Type>;
 
     constructor(
         {
+            id,
             number,
             name,
             stats,
@@ -25,14 +33,16 @@ export class TPokemon {
         }
         :
         {
+            id: number,
             number: number,
             name: string,
             stats: Array<Stat>,
             height: number,
             weight: number,
             imageUrl: string,
-            types: Array<string>
+            types: Array<Type>
     }) {
+        this.id = id;
         this.number = number;
         this.name = name;
         this.stats = stats;

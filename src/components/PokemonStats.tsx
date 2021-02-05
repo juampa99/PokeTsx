@@ -7,17 +7,21 @@ const PokemonStats = ({stats} : {stats: Stat[] }) => {
 
     let [width, setWidth] = useState(0);
 
-    useEffect( () => {
+    useEffect(() => {
         setWidth(getStatBarWidthFraction());
     }, [])
 
     return (
         <>
-            {stats.map((stat : Stat, i : number) => {
+            {stats.map((stat: Stat, i: number) => {
                 return (
-                    <h3 key={i} > {capitalize(stat.name)}
-                    <StatBar width={width} stat={stat} key={i}/>
-                </h3>
+                    <h3 key={i}> {capitalize(stat.name)}
+
+                        <div className="stat-bars">
+                            <StatBar width={width} stat={stat} />
+                        </div>
+
+                    </h3>
                 )
             })}
         </>

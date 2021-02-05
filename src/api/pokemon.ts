@@ -1,8 +1,8 @@
-import {IPokemon, IPokemonStat} from "pokeapi-typescript";
+import { IPokemon } from "pokeapi-typescript";
 
 const BASE_URL = 'https://pokeapi.co/api/v2/pokemon/';
 
-export async function loadPokemonlist() {
+export async function fetchPokemonlist() {
     return (await fetch(`${BASE_URL}?offset=0&limit=2000`)).json();
 }
 
@@ -11,6 +11,5 @@ export async function fetchPokemonByName(name: string): Promise<IPokemon> {
 }
 
 export async function fetchPokemonById(id: number): Promise<IPokemon> {
-    console.log(`${BASE_URL}${id}`);
     return (await fetch(`${BASE_URL}${id}`)).json();
 }

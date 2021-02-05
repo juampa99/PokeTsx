@@ -1,7 +1,8 @@
 import {SearchBar} from "./SearchBar";
 import {useEffect, useState} from "react";
-import {loadPokemonlist} from "../api/pokemon";
+import {fetchPokemonlist} from "../api/pokemon";
 import logo from "../logo.png";
+import {getPokemonList} from "../services/pokemon";
 
 const HomePage = () => {
     const [pokemonList, setPokemonList] = useState([]);
@@ -9,7 +10,7 @@ const HomePage = () => {
     // Loads pokemon list
     useEffect( () => {
         ( async () => {
-            setPokemonList( ( await loadPokemonlist() ).results );
+            setPokemonList( await getPokemonList() )
         })()
     }, []);
 

@@ -1,6 +1,6 @@
-import {capitalize} from "../services/pokemon";
-import {PokemonStats} from "./PokemonStats";
-import {TPokemon} from "../entities/TPokemon";
+import { PokemonStats } from "./PokemonStats";
+import { TPokemon } from "../entities/TPokemon";
+import { Types } from "./Types";
 
 const PokemonCard = ( { data }: { data: TPokemon | undefined } ) => {
 
@@ -15,15 +15,23 @@ const PokemonCard = ( { data }: { data: TPokemon | undefined } ) => {
 
     return (
         <div className="pokemon_card" >
-            <h1> { pokemonData.number + " " + pokemonData.name } </h1>
+            <h1 className="pokemon-title" >
+                <div className="pokemon-order"> { pokemonData.number } </div>
+                <div className="pokemon-name"> { pokemonData.name } </div>
+            </h1>
+
+            <hr/>
+
             <img src={pokemonData.imageUrl } alt="Pokemon image" />
 
             <div>
-                <h2>Types: { pokemonData.types.map( (type: string, i: number) => <span key={i} > {capitalize(type)} </span> ) } </h2>
-                <p>
+                <Types types={pokemonData.types} />
+
+                <div>
                     <h2>Height: {pokemonData.height}</h2>
                     <h2>Weight: {pokemonData.weight}</h2>
-                </p>
+                </div>
+
             </div>
 
             <PokemonStats stats={pokemonData.stats} />

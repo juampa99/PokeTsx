@@ -9,8 +9,6 @@ import {
 import { HomePage } from './components/HomePage';
 import { Pokemon } from "./components/Pokemon";
 
-
-
 function App() {
   return (
       <Router>

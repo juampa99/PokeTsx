@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
-import {Dispatch, SetStateAction, useEffect, useState} from "react";
-import { fetchPokemonById } from "../api/pokemon";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { PokemonCard } from "./PokemonCard";
-import {fromObjectToEntity} from "../mappers/pokemon";
-import {TPokemon} from "../entities/TPokemon";
+import { TPokemon } from "../entities/TPokemon";
+import {getPokemonById} from "../services/pokemon";
 
 const Pokemon = () => {
     const { id } = useParams<{ id: string }>();
@@ -13,9 +12,7 @@ const Pokemon = () => {
 
     useEffect( () => {
         ( async () => {
-            const rawPokeData = await fetchPokemonById(Number(id));
-            setPokemonData( fromObjectToEntity(rawPokeData) );
-
+            setPokemonData( await getPokemonById(Number(id)) );
         })()
     }, [])
 
