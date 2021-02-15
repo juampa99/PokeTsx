@@ -1,5 +1,5 @@
 import {SearchBar} from "./SearchBar";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import logo from "../logo.png";
 import {getPokemonList} from "../services/pokemon";
 
@@ -12,6 +12,8 @@ const HomePage = () => {
             setPokemonList( await getPokemonList() )
         })()
     }, []);
+
+    console.log(process.env.PUBLIC_URL);
 
     return (
         <>

@@ -11,13 +11,13 @@ import { Pokemon } from "./components/Pokemon";
 
 function App() {
   return (
-      <HashRouter basename="/">
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <div className="app" >
             <Switch>
-                <Route path="/pokemon/:id">
+                <Route path={"/pokemon/:id"}>
                     <Pokemon />
                 </Route>
-                <Route path="/">
+                <Route path={"/"}>
                     <HomePage />
                 </Route>
             </Switch>
