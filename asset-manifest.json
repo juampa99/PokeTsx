@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/PokeTsx/static/css/main.841cb48a.chunk.css",
-    "main.js": "/PokeTsx/static/js/main.04a79298.chunk.js",
-    "main.js.map": "/PokeTsx/static/js/main.04a79298.chunk.js.map",
+    "main.css": "/PokeTsx/static/css/main.d518c121.chunk.css",
+    "main.js": "/PokeTsx/static/js/main.ffb6e6ce.chunk.js",
+    "main.js.map": "/PokeTsx/static/js/main.ffb6e6ce.chunk.js.map",
     "runtime-main.js": "/PokeTsx/static/js/runtime-main.d88dca75.js",
     "runtime-main.js.map": "/PokeTsx/static/js/runtime-main.d88dca75.js.map",
     "static/js/2.29b2338f.chunk.js": "/PokeTsx/static/js/2.29b2338f.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.8b2206ea.chunk.js": "/PokeTsx/static/js/3.8b2206ea.chunk.js",
     "static/js/3.8b2206ea.chunk.js.map": "/PokeTsx/static/js/3.8b2206ea.chunk.js.map",
     "index.html": "/PokeTsx/index.html",
-    "static/css/main.841cb48a.chunk.css.map": "/PokeTsx/static/css/main.841cb48a.chunk.css.map",
+    "static/css/main.d518c121.chunk.css.map": "/PokeTsx/static/css/main.d518c121.chunk.css.map",
     "static/js/2.29b2338f.chunk.js.LICENSE.txt": "/PokeTsx/static/js/2.29b2338f.chunk.js.LICENSE.txt",
     "static/media/logo.140d90cb.png": "/PokeTsx/static/media/logo.140d90cb.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d88dca75.js",
     "static/js/2.29b2338f.chunk.js",
-    "static/css/main.841cb48a.chunk.css",
-    "static/js/main.04a79298.chunk.js"
+    "static/css/main.d518c121.chunk.css",
+    "static/js/main.ffb6e6ce.chunk.js"
   ]
 }
