@@ -4,14 +4,14 @@ import './style/pokemon_card.css'
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
+    Route, HashRouter,
 } from "react-router-dom";
 import { HomePage } from './components/HomePage';
 import { Pokemon } from "./components/Pokemon";
 
 function App() {
   return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <HashRouter basename="/">
         <div className="app" >
             <Switch>
                 <Route path="/pokemon/:id">
@@ -22,7 +22,7 @@ function App() {
                 </Route>
             </Switch>
         </div>
-      </Router>
+      </HashRouter>
   );
 }
 
