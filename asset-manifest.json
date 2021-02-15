@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/PokeTsx/static/css/main.841cb48a.chunk.css",
-    "main.js": "/PokeTsx/static/js/main.242741df.chunk.js",
-    "main.js.map": "/PokeTsx/static/js/main.242741df.chunk.js.map",
+    "main.js": "/PokeTsx/static/js/main.1afe1434.chunk.js",
+    "main.js.map": "/PokeTsx/static/js/main.1afe1434.chunk.js.map",
     "runtime-main.js": "/PokeTsx/static/js/runtime-main.d88dca75.js",
     "runtime-main.js.map": "/PokeTsx/static/js/runtime-main.d88dca75.js.map",
     "static/js/2.b3e42d8d.chunk.js": "/PokeTsx/static/js/2.b3e42d8d.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.d88dca75.js",
     "static/js/2.b3e42d8d.chunk.js",
     "static/css/main.841cb48a.chunk.css",
-    "static/js/main.242741df.chunk.js"
+    "static/js/main.1afe1434.chunk.js"
   ]
 }
