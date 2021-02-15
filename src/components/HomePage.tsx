@@ -1,6 +1,5 @@
 import {SearchBar} from "./SearchBar";
 import {useEffect, useState} from "react";
-import {fetchPokemonlist} from "../api/pokemon";
 import logo from "../logo.png";
 import {getPokemonList} from "../services/pokemon";
 
