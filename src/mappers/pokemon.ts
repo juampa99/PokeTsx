@@ -14,8 +14,8 @@ function fromObjectToEntity(pokemonData: IPokemon) {
 
     const number = pokemonData.order;
 
-    const height = pokemonData.height;
-    const weight = pokemonData.weight;
+    const height = pokemonData.height/10;
+    const weight = pokemonData.weight/10;
 
     const stats: any = pokemonData.stats.map( stat=> {
         return {

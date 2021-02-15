@@ -28,8 +28,8 @@ const PokemonCard = ( { data }: { data: TPokemon | undefined } ) => {
                 <Types types={pokemonData.types} />
 
                 <div>
-                    <h2>Height: {pokemonData.height}</h2>
-                    <h2>Weight: {pokemonData.weight}</h2>
+                    <h2>Height: {pokemonData.height}kg</h2>
+                    <h2>Weight: {pokemonData.weight}m</h2>
                 </div>
 
             </div>
