@@ -1,5 +1,5 @@
 import { PokemonItem } from "../entities/PokemonItem";
-import {loadPokemonById, loadPokemonList, storePokemon} from "../storage/pokemon";
+import {loadPokemonById, loadPokemonList, storePokemon, storePokemonList} from "../storage/pokemon";
 import {TPokemon} from "../entities/TPokemon";
 import {fetchPokemonById, fetchPokemonlist} from "../api/pokemon";
 import {fromObjectToEntity} from "../mappers/pokemon";
@@ -65,6 +65,7 @@ async function getPokemonList(): Promise<any> {
     }
     catch {
         pokemonList = await fetchPokemonlist();
+        storePokemonList(pokemonList);
     }
 
     return pokemonList.results;

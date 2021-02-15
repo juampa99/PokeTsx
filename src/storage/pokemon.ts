@@ -32,4 +32,12 @@ function loadPokemonList() {
     return JSON.parse(pokemonList);
 }
 
-export { loadPokemonById, storePokemon, loadPokemonList };
+function storePokemonList(PokemonList: any) {
+    if(!PokemonList) {
+        throw new Error('Passed invalid pokemon list');
+    }
+
+    localStorage.setItem('pokemonList', JSON.stringify(PokemonList));
+}
+
+export { loadPokemonById, storePokemon, loadPokemonList, storePokemonList };
