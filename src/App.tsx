@@ -11,7 +11,7 @@ import { Pokemon } from "./components/Pokemon";
 
 function App() {
   return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="app" >
             <Switch>
                 <Route path="/pokemon/:id">
